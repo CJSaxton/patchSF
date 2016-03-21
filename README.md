@@ -31,6 +31,7 @@ COMPILATION:
     gcc -lm -lgsl -lgslcblas patchsf.c -o patchsf
     
 HISTORY:
+
     Written by Curtis J. Saxton (2011,2012).
     Tidying by Curtis J. Saxton (20160306).
 
