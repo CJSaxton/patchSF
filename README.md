@@ -27,6 +27,7 @@ Alternatively, calculate a Leahy normalised power spectrum.
     ^blah.dat       send output to "blah.dat" 
  
 COMPILATION:
+
     gcc -lm -lgsl -lgslcblas patchsf.c -o patchsf
     
 HISTORY:
