@@ -40,7 +40,7 @@ If you apply or adapt the structure function code in academic research, please c
     "Long-term X-ray variability of Swift J1644+57"
      Curtis J. Saxton,  Roberto Soria,  Kinwah Wu,  N. Paul M. Kuin,
      2012, Monthly Notices Royal Astronomical Society 422, 1625-1639.
-     [http://dx.doi.org/10.1111/j.1365-2966.2012.20739.x](http://dx.doi.org/10.1111/j.1365-2966.2012.20739.x)
+     [[http://dx.doi.org/10.1111/j.1365-2966.2012.20739.x|http://dx.doi.org/10.1111/j.1365-2966.2012.20739.x]]
      http://dx.doi.org/10.1111/j.1365-2966.2012.20739.x
      DOI: 10.1111/j.1365-2966.2012.20739.x
      http://arxiv.org/abs/1201.5210
