@@ -5,7 +5,7 @@ The first command-line argument is the input data file.
 
 EXAMPLE:
 
-    ./patchsf signal.dat start=1. end=20. n=2 tmin=10. tmax=1.e3 ^results.dat
+    ./patchSF signal.dat start=1. end=20. n=2 tmin=10. tmax=1.e3 ^results.dat
  
  COMMAND-LINE PARAMETERS & OPTIONS:
  
@@ -28,7 +28,7 @@ Alternatively, calculate a Leahy normalised power spectrum.
  
 COMPILATION:
 
-    gcc -lm -lgsl -lgslcblas patchsf.c -o patchsf
+    gcc -lm -lgsl -lgslcblas patchsf.c -o patchSF
     
 HISTORY:
 
