@@ -5,9 +5,47 @@
  *
  *  The first command-line argument is the input data file.
  *
+ *
+ *  INPUT FILE FORMAT:
+ *
+ *  The input file has four columns:
+ *
+ *      t       = time of observation (temperal bin centroid)
+ *      dt      = width of the temporal bin (or time uncertainty)  
+ *      z       = signal or count-rate during this time bin
+ *      dz      = uncertainty in the signal or count-rate
+ *
+ *
+ *  OUTPUT FILE FORMAT:
+ *
+ *  The output file has four columns:
+ *
+ *      tau     = timescale of SF evaluation                    
+ *      W       = a weight or normalisation denominator in the SF
+ *      W S     = numerator in the structure function at tau
+ *      W dS    = uncertainty propagated to the product (W S)
+ *
+ *  Thus the order-n structure function at timescale tau, and its uncertainty
+ *  are:
+ *
+ *      S_n(tau)  = (W S) / W   =  (column 3) / (column 2)
+ *      dS_n(tau) = (W dS) / W  = (column 4) / (column 2)
+ *
+ *  The code writes the denominator "W" as a separate column as a precaution.
+ *  With temporally patchy data, there are sometimes circumstances when W=0 at
+ *  some timescale tau.  Keeping "W" distinct enables an informed user to
+ *  discard those rows from the output file.
+ *
+ *  The sequence of tau values is the union of a linearly spaced sequence
+ *  (tmin<=tau<=tmax) and a logarithmically spaced sequence in the same domain.
+ *  To increase or decrease the resolution of this output grid, vary the "try"
+ *  command-line parameter.
+ *
+ *
  *  EXAMPLE:
  *
  *  ./patchsf signal.dat start=1. end=20. n=2 tmin=10. tmax=1.e3 ^results.dat
+ *
  *
  *  COMMAND-LINE PARAMETERS & OPTIONS:
  *
@@ -34,6 +72,8 @@
  *  COMPILATION:
  *
  *  	gcc -lm -lgsl -lgslcblas patchsf.c -o patchsf
+ *
+ *
  *
  *  HISTORY:
  *
