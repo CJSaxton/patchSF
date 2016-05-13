@@ -12,14 +12,16 @@ The input file has four columns:
     dz      = uncertainty in the signal or count-rate
     
 OUTPUT FORMAT:
-    tau     = timescale of SF evaluation                    
-    W       = a weight or normalisation denominator in the SF
-    W S     = numerator in the structure function at tau
-    W dS    = uncertainty propagated to the product (W S)
 
+    tau     = timescale of SF evaluation
+    W       = a weight or normalisation denominator in the SF
+    W S     = numerator in the structure function at timescale tau
+    W dS    = uncertainty propagated into the product (W S)
+    
 Thus the structure function at timescale tau, and its uncertainty are:
-    S_n(tau) = (W S) / W =  (column 3) / (column 2)
-    dS_n(tau) = (W dS) / W = (column 4) / (column 2)
+
+    S_n(tau)  = (W S) / W   =  (column 3) / (column 2)
+    dS_n(tau) = (W dS) / W  = (column 4) / (column 2)
 
 The code writes the denominator "W" as a separate column as a precaution.  With temporally patchy data, there are sometimes circumstances when W=0 at some timescale tau.  Keeping "W" distinct enables an informed user to discard those
 rows from the output file.
