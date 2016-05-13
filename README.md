@@ -23,8 +23,7 @@ Thus the structure function at timescale tau, and its uncertainty are:
     S_n(tau)  = (W S) / W   =  (column 3) / (column 2)
     dS_n(tau) = (W dS) / W  = (column 4) / (column 2)
 
-The code writes the denominator "W" as a separate column as a precaution.  With temporally patchy data, there are sometimes circumstances when W=0 at some timescale tau.  Keeping "W" distinct enables an informed user to discard those
-rows from the output file.
+The code writes the denominator "W" as a separate column as a precaution.  With temporally patchy data, in some numerical methods, there are sometimes circumstances when W=0 at some timescale tau.  Keeping "W" distinct enables an informed user to discard those rows from the output file.
 
 The sequence of tau values is the union of a linearly spaced sequence (tmin<=tau<=tmax) and a logarithmically spaced sequence in the same domain.  To increase or decrease the resolution of this output grid, vary the "try" command-line parameter.
 
