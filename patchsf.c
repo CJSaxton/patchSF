@@ -32,9 +32,9 @@
  *      dS_n(tau) = (W dS) / W  = (column 4) / (column 2)
  *
  *  The code writes the denominator "W" as a separate column as a precaution.
- *  With temporally patchy data, there are sometimes circumstances when W=0 at
- *  some timescale tau.  Keeping "W" distinct enables an informed user to
- *  discard those rows from the output file.
+ *  With temporally patchy data, in some numerical methods, there are sometimes
+ *  circumstances when W=0 at some timescale tau.  Keeping "W" distinct enables
+ *  an informed user to discard those rows from the output file.
  *
  *  The sequence of tau values is the union of a linearly spaced sequence
  *  (tmin<=tau<=tmax) and a logarithmically spaced sequence in the same domain.
@@ -73,8 +73,9 @@
  *
  *  	gcc -lm -lgsl -lgslcblas patchsf.c -o patchsf
  *
- * This code depends on the installation of Gnu Scientific Library (GSL):
- * 	http://www.gnu.org/software/gsl/
+ *  This code depends on the installation of Gnu Scientific Library (GSL):
+ *  	http://www.gnu.org/software/gsl/
+ *
  *
  *
  *  HISTORY:
