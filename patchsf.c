@@ -73,6 +73,8 @@
  *
  *  	gcc -lm -lgsl -lgslcblas patchsf.c -o patchsf
  *
+ * This code depends on the installation of Gnu Scientific Library (GSL):
+ * 	http://www.gnu.org/software/gsl/
  *
  *
  *  HISTORY:
